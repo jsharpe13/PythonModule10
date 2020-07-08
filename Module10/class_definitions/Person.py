@@ -25,15 +25,16 @@ class Person:
 
 
 # Driver
-# Valid person
-person1 = Person('Duck', 'Donald') # ssn not required
-print(person1.display())
-# Valid person and ssn
-person2 = Person('Duck', 'Donald', '111-11-1111')
-print(person2.display())
-# Invalid person
-# Wait! try/except needed!
-try:
-    person3 = Person('123', 'Donald', '111-11-1111')
-except ValueError:
-    print("Error found, person not created")
+if __name__ == '__main__':
+    # Valid person
+    person1 = Person('Duck', 'Donald') # ssn not required
+    print(person1.display())
+    # Valid person and ssn
+    person2 = Person('Duck', 'Donald', '111-11-1111')
+    print(person2.display())
+    # Invalid person
+    # Wait! try/except needed!
+    try:
+        person3 = Person('123', 'Donald', '111-11-1111')
+    except ValueError:
+        print("Error found, person not created")
